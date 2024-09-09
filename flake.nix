@@ -36,6 +36,7 @@
           packages = [
             # Rust
             rust
+            pkgs.trunk
 
             # Nix
             pkgs.nil
