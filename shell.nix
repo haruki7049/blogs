@@ -10,4 +10,8 @@ pkgs.mkShell {
     # Nix
     pkgs.nil
   ];
+
+  shellHook = ''
+    export PS1="\n[nix-shell\w]$ "
+  '';
 }
