@@ -9,8 +9,11 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
+        treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
       in
       {
+        formatter = treefmtEval.config.build.wrapper;
+
         devShells.default = pkgs.callPackage ./shell.nix { };
       });
 }
