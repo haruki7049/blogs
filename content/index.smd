@@ -7,4 +7,4 @@
 ---
 
 # blogs' List
-- No blogs
+- [初めてのブログ]($link.page("blogs/first-blog"))
