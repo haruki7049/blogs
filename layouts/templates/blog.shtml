@@ -10,11 +10,13 @@
     </head>
     <body id="body">
         <header>
-            <a href="$site.page('').link()">toppage</a>
+            <ul>
+                <li><a href="$site.page('').link()">toppage</a></li>
+            </ul>
+            <h1>Haruki7049's blogs</h1>
         </header>
 
         <main id="content">
-            <h1>Haruki7049's blogs</h1>
             <super>
         </main>
 
