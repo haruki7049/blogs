@@ -3,8 +3,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     treefmt-nix.url = "github:numtide/treefmt-nix";
-    rust-overlay.url = "github:oxalica/rust-overlay";
-    crane.url = "github:ipetkov/crane";
   };
 
   outputs =
@@ -13,17 +11,26 @@
       nixpkgs,
       flake-utils,
       treefmt-nix,
-      rust-overlay,
-      crane,
       ...
     }:
     flake-utils.lib.eachDefaultSystem (
       system:
       let
-        overlays = [ (import rust-overlay) ];
-        pkgs = import nixpkgs { inherit system overlays; };
+        pkgs = import nixpkgs { inherit system; };
+        lib = pkgs.lib;
+        stdenv = pkgs.stdenv;
         treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
-        rust = pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
+        zig = pkgs.zig_0_13;
+        blogs = stdenv.mkDerivation {
+          pname = "blogs";
+          version = "dev";
+
+          src = lib.cleanSource ./.;
+
+          nativeBuildInputs = [
+            zig.hook
+          ];
+        };
       in
       {
         formatter = treefmtEval.config.build.wrapper;
@@ -34,12 +41,12 @@
 
         devShells.default = pkgs.mkShell {
           packages = [
-            # Rust
-            rust
-            pkgs.trunk
-
             # Nix
             pkgs.nil
+
+            # Ziglang
+            zig
+            pkgs.zls
           ];
 
           shellHook = ''
