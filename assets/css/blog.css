@@ -26,6 +26,6 @@ main > ul {
     list-style: disc;
 }
 
-footer > ul {
+footer > address > ul {
     list-style: none;
 }
