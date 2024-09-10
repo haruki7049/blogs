@@ -1,0 +1,10 @@
+---
+.title = "hoge",
+.author = "haruki7049",
+.date = @date("2024-09-10T00:00:00"),
+.layout = "index.html",
+.draft = false,
+---
+
+# Test page
+This is test page for blogs.haruki7049.dev
