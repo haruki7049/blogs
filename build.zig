@@ -9,6 +9,6 @@ pub fn build(b: *std.Build) void {
         .content_dir_path = "content",
         .assets_dir_path = "assets",
 
-        .static_assets = &.{ "fonts/UDEVGothicNF-Regular.ttf" },
+        .static_assets = &.{ "fonts/UDEVGothicNF-Regular.ttf", "css/default.css", "css/fonts.css" },
     });
 }
