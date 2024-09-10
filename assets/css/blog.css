@@ -20,7 +20,11 @@ footer {
     text-align: center;
 }
 
-ul {
+header > ul {
+    list-style: none;
+}
+
+footer > ul {
     list-style: none;
 }
 
