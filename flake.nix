@@ -17,20 +17,8 @@
       system:
       let
         pkgs = import nixpkgs { inherit system; };
-        lib = pkgs.lib;
-        stdenv = pkgs.stdenv;
         treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
         zig = pkgs.zig_0_13;
-        blogs = stdenv.mkDerivation {
-          pname = "blogs";
-          version = "dev";
-
-          src = lib.cleanSource ./.;
-
-          nativeBuildInputs = [
-            zig.hook
-          ];
-        };
       in
       {
         formatter = treefmtEval.config.build.wrapper;
