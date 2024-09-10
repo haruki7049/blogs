@@ -13,10 +13,6 @@ body {
     text-align: left;
 }
 
-body > ul {
-    list-style: disc;
-}
-
 footer {
     font-family: "UDEV Gothic NF";
     margin: 10px 100px;
@@ -26,4 +22,8 @@ footer {
 
 ul {
     list-style: none;
+}
+
+main > ul {
+    list-style: disc;
 }
