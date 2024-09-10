@@ -13,8 +13,8 @@
             <a href="$site.page('').link()">toppage</a>
         </header>
 
-        <h1>Haruki7049's blogs</h1>
         <main id="content">
+            <h1>Haruki7049's blogs</h1>
             <super>
         </main>
 
