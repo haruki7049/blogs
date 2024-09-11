@@ -9,6 +9,3 @@
 }],
 .draft = false,
 ---
-
-# blogs' List
-- [初めてのブログ]($link.page("blogs/first-blog"))

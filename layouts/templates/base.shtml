@@ -14,6 +14,13 @@
         </header>
 
         <main id="content">
+            <h1>Blog's list</h1>
+            <div :loop="$page.subpages()">
+                <ul>
+                    <li><a href="$loop.it.link()" :text="$loop.it.title"></a></li>
+                </ul>
+            </div>
+            
             <super>
         </main>
 
