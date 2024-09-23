@@ -1,3 +1,0 @@
-<extend template="blog.shtml">
-<title id="title" :text="$page.title"></title>
-<main id="content" :html="$page.content()"></main>

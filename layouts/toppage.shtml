@@ -1,3 +1,43 @@
-<extend template="base.shtml">
-<title id="title" :text="$page.title"></title>
-<main id="content" :html="$page.content()"></main>
+<!DOCTYPE html>
+<html>
+    <head id="head">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="$site.asset('css/fonts.css').link()">
+        <link rel="stylesheet" type="text/css" href="$site.asset('css/toppage.css').link()">
+        <title id="title" :text="$page.title"></title>
+    </head>
+    <body id="body">
+        <header>
+            <h1>Haruki7049's blogs</h1>
+        </header>
+
+        <main id="content">
+            <h1>Blog's list</h1>
+            <div :loop="$page.subpages()">
+                <ul>
+                    <li><a href="$loop.it.link()" :text="$loop.it.title"></a></li>
+                </ul>
+            </div>
+            
+            <div id="content" :html="$page.content()"></div>
+        </main>
+
+        <hr>
+
+        <footer>
+            <h1>Address</h1>
+            <address>
+                <ul>
+                  <li>GitHub: <a href="https://github.com/haruki7049">haruki7049</a></li>
+                  <li>Bluesky: <a href="https://bsky.app/profile/haruki7049.dev">@haruki7049.dev</a></li>
+                  <li>YouTube: <a href="https://www.youtube.com/@haruki7049">@haruki7049</a></li>
+                  <li>Ko-fi: <a href="https://ko-fi.com/haruki7049">haruki7049</a></li>
+                </ul>
+            </address>
+            <p>This site is hosted under MIT license using GitHub Pages.</p>
+            <p>Repository: <a href="https://github.com/haruki7049/blogs">https://github.com/haruki7049/blogs</a></p>
+            <p>BTW, I use NixOS. Wanna use NixOS? <a href="https://nixos.org">https://nixos.org</a></p>
+            <a href="/rss.xml" rel="alternate" type="application/rss+xml">RSS feed</a>
+        </footer>
+    </body>
+</html>
