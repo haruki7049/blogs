@@ -3,5 +3,9 @@ body {
     margin: 10px 100px;
     padding: 10px;
     border: 5px double #606060;
+    text-align: start;
+}
+
+body > header {
     text-align: center;
 }
