@@ -1,4 +1,4 @@
-#+title: 初めてのブログ
+#+title: ブログをzine-ssgからOrg-modeに変えた話
 #+author: haruki7049
 #+email: tontonkirikiri@gmail.com
 #+language: Japanese
