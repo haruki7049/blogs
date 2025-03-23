@@ -1,0 +1,3 @@
+#+TITLE: Sitemap for Haruki7049's blogs
+
+- [[file:first-blog.org][ブログをzine-ssgからOrg-modeに変えた話]]
