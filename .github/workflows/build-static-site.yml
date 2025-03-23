@@ -15,16 +15,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4.1.7
-      - name: Setup zig
-        uses: mlugg/setup-zig@v1.2.0
+      - name: Install Nix
+        uses: cachix/install-nix-action@v26
         with:
-          version: 0.13.0
+          nix_path: nixpkgs=channel:nixos-unstable
       - name: Build static site
-        run: zig build --summary new
+        run: nix-shell --run "make"
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: zig-out
+          path: dist
 
   deploy:
     needs: build
