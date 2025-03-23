@@ -26,15 +26,12 @@
           treefmt = {
             projectRootFile = "flake.nix";
             programs.nixfmt.enable = true;
-            programs.zig.enable = true;
             programs.actionlint.enable = true;
           };
 
           devShells.default = pkgs.mkShell {
             packages = [
               pkgs.nil
-              pkgs.zig_0_13
-              pkgs.zls
             ];
 
             shellHook = ''

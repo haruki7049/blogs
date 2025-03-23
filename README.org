@@ -1,0 +1,5 @@
+#+title: blogs
+#+author: haruki7049
+#+email: tontonkirikiri@gmail.com
+
+https://blogs.haruki7049.dev
