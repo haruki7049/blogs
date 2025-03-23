@@ -17,6 +17,7 @@
          :sitemap-title "Sitemap for Haruki7049's blogs"
 
          ;; CSS loader from HTTP
-         :html-head "<link href=\"https://thomasf.github.io/solarized-css/solarized-dark.css\" rel=\"stylesheet\"></link>")))
+         :html-head "<link href=\"https://thomasf.github.io/solarized-css/solarized-dark.css\" rel=\"stylesheet\"></link>
+         <link href=\"favicon.ico\" rel=\"icon\"></link>")))
 
 (org-publish-all t)
