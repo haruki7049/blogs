@@ -1,8 +1,0 @@
-#+title: Org-modeでブログ作りなおした
-#+author: haruki7049
-#+email: tontonkirikiri@gmail.com
-#+language: Japanese
-
-TODO: まだ書き途中だけどアップロードした。
-
-=Org-mode= でブログを作りなおしたという話。
