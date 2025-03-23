@@ -1,0 +1,74 @@
+#+title: WIP: Nix flakesのすすめ
+#+author: haruki7049
+#+email: tontonkirikiri@gmail.com
+#+language: Japanese
+
+本を書いてみようかと思って、色々書き連ねていたやつ。Nix flakesによるプロジェクトセットアップについての本。書き途中。
+
+* はじめに
+
+この本を手に取ってくださりありがとうございます。この本は、Nix flakesをいかに活用するかを例示する本となっています。不明点があった場合は私のメールアドレス、 =tontonkirikiri@gmail.com= に気軽に連絡してください。
+
+この本の読者の対象を以下に書きます。
+- レガシーNix[fn:1]のコマンド体系をある程度理解している人。
+- Nix式をある程度読める人[fn:2]。
+
+逆に以下のような人々は対象ではありません。
+- Nixライブラリの実装を深く読んで理解したい人。この本は、Nix flakesをとりあえず使えるようになるためのものなので、flake-utilsの実装などは読みません。
+- Nix式がうまく読めない人。この本ではNix flakesのためのNix式がたんまり登場します[fn:3]。
+
+初めて書く本なので拙い部分もあるかと思いますが、よろしくお願いします。
+
+* とりあえずNix flakesに触れてみる
+
+Nix flakesは、 =Nix-v2.4= にて初めて実装されており、それ以降現在のリリースである =Nix-v2.24.11= にも実装されている機能です。この機能は未だに試験的機能[fn:4]としてマークされていますが、デファクトスタンダードとして広くNixユーザーに使用されています。
+
+#+begin_quote
+フレークは、Nixベースのプロジェクトを、より発見しやすく、構成可能で、一貫性があり、再現可能な方法でパッケージ化するための新しいフォーマットです。フレークは、他のフレークとの依存関係を指定し、パッケージ、Nixpkgsオーバーレイ、NixOSモジュール、CIテストなどのNixアセットを返すflake.nixという名前のファイルを含むリポジトリまたはtarボールです。例えば、 ~nix run nixpkgs\#hello~ のようなコマンドは、nixpkgsフレークからhelloアプリケーションを実行します。
+フレークは現在実験的とされている。導入については、このブログ記事を参照してください。フレークのシンタックスとセマンティクスの詳細については、nix flakeマニュアル・ページを参照してください。
+
+-- https://nix.dev/manual/nix/2.25/release-notes/rl-2.4.html よりDeepL翻訳
+#+end_quote
+
+前提情報はこのくらいですので、一旦Nixが使える状態にしましょう。個人的に、非Nixユーザーから最も簡単なNixの試用方法は、Docker経由での試用が一番だと思っていますので、今回はDockerから試してみましょう。以下のBashコマンドを実行してください。
+
+#+begin_src sh
+  # この本はNixの本だから、Dockerのインストールの解説はしないよ〜
+  # Googleとかで検索すれば多分でてくると思うよ
+  docker run -it nixos/nix
+#+end_src
+
+このDockerイメージはかなりのレイヤー数を保持しているので、Dockerイメージダウンロードには時間がかかると思います。
+
+Bashプロンプトが表示されたら、以下のコマンド群を入力して試してみましょう。しっかりバージョンが表示され、PATHが通っていることが確認できると思います。
+
+#+begin_src sh
+  nix-shell --version # Nix flakesじゃない方
+  nix-build --version # Nix flakesじゃない方
+  nix --version # Nix flakesな方
+#+end_src
+
+Nix flakesでは、 ~nix~ というコマンドを主に使います。このコマンドにはサブコマンドがたくさん用意されています。 ~man nix~ で検索してみましょう。
+
+#+begin_src sh
+  # よく使うサブコマンドのリスト
+  # 筆者はこんな辺りをよく使う
+  # 試しに"nix build"と打ってみよう。
+  # ちゃんとサブコマンドが認識されていることがわかるはず。
+  nix build
+  nix develop
+  nix shell
+  nix repl
+  nix flake
+#+end_src
+
+* Footnotes
+
+[fn:1] ここでは、 ~nix-shell~ や ~nix-build~ などのコマンド体系を持ち、 =default.nix= や =shell.nix= のファイルを取り扱う、通常のNixのことを指す。
+[fn:2] =Derivation= や ~pkgs.callPackage~ を理解しているくらいのレベル感を想定。
+[fn:3] それでも読みたいなら、スパルタな気分でお読みください。
+[fn:4] 翻訳元: experimental features
+
+* COMMENT
+** TODO
+- 行数が足りないのでもっと書け!!

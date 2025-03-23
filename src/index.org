@@ -1,4 +1,5 @@
 #+TITLE: Sitemap for Haruki7049's blogs
 
+- [[file:Development-environment-with-nix-flakes.org][WIP: Nix flakesのすすめ]]
 - [[file:A-man-who-says-Nix-is-great.org][WIP: Nixはいいぞおじさん「Nixはいいぞ」]]
 - [[file:first-blog.org][ブログをzine-ssgからOrg-modeに変えた話]]
