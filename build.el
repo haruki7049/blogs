@@ -10,8 +10,13 @@
          :with-title t
          :with-date nil
          :html-head-include-default-style nil
+
+         ;; Sitemap generator
          :auto-sitemap t
          :sitemap-filename "index.org"
-         :sitemap-title "Sitemap for Haruki7049's blogs")))
+         :sitemap-title "Sitemap for Haruki7049's blogs"
+
+         ;; CSS loader from HTTP
+         :html-head "<link href=\"https://thomasf.github.io/solarized-css/solarized-dark.css\" rel=\"stylesheet\"></link>")))
 
 (org-publish-all t)
