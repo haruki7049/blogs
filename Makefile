@@ -3,4 +3,4 @@ build:
 
 clean:
 	# Delete all generated HTML
-	rm dist/*.html
+	rm -f dist/*.html

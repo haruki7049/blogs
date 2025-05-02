@@ -23,11 +23,47 @@
 
       perSystem =
         { pkgs, ... }:
+        let
+          # This app needed Emacs to run `make`
+          build = {
+            type = "app";
+            program = pkgs.writeShellApplication {
+              name = "build-script";
+              runtimeInputs = [
+                pkgs.emacs-nox
+                pkgs.gnumake
+              ];
+
+              text = ''
+                make
+              '';
+            };
+          };
+          clean = {
+            type = "app";
+            program = pkgs.writeShellApplication {
+              name = "clean-script";
+              runtimeInputs = [
+                pkgs.emacs-nox
+                pkgs.gnumake
+              ];
+
+              text = ''
+                make clean
+              '';
+            };
+          };
+        in
         {
           treefmt = {
             projectRootFile = "flake.nix";
             programs.nixfmt.enable = true;
             programs.actionlint.enable = true;
+          };
+
+          apps = {
+            inherit build clean;
+            default = build;
           };
 
           devShells.default = pkgs.mkShell {
