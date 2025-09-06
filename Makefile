@@ -1,6 +1,0 @@
-build:
-	emacs -Q --batch -l build.el
-
-clean:
-	# Delete all generated HTML
-	rm -f dist/*.html
