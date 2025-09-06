@@ -1,6 +1,8 @@
 base_url = "https://blogs.haruki7049.dev"
 title = "Haruki7049's blogs"
 theme = "archie-zola"
+generate_feeds = true
+feed_filenames = ["rss.xml"]
 
 [extra]
 mode = "toggle"  # auto | dark | toggle
