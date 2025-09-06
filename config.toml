@@ -1,7 +1,28 @@
 base_url = "https://blogs.haruki7049.dev"
 title = "Haruki7049's blogs"
-#theme = "archie-zola"
+theme = "archie-zola"
 
 [extra]
 mode = "toggle"  # auto | dark | toggle
 subtitle = "Your tagline here"
+copyright = "haruki7049 <tontonkirikiri@gmail.com>"
+
+[[extra.translations.en]]
+show_more = "Read more ⟶"
+previous_page = "← Previous"
+next_page = "Next →"
+posted_on = "on "
+posted_by = "Published by"
+read_time = "minute read"
+all_tags = "All tags"
+menus = [
+    { name = "Home", url = "/", weight = 1 },
+    { name = "Posts", url = "/posts", weight = 2 },
+    { name = "Tags", url = "/tags", weight = 3 },
+    { name = "About", url = "/about", weight = 4 },
+]
+
+[[extra.social]]
+icon = "github"
+name = "GitHub"
+url = "https://github.com/haruki7049"

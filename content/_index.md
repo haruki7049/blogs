@@ -1,6 +1,4 @@
 +++
-title = "ホーム"
+title = "Haruki7049's blogs"
+sort_by = "date"
 +++
-
-# ようこそ
-これは **Zola** で作ったサイトです。
