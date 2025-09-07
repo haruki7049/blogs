@@ -7,7 +7,7 @@ feed_filenames = ["rss.xml"]
 [extra]
 mode = "toggle"  # auto | dark | toggle
 subtitle = "Your tagline here"
-copyright = "haruki7049 <tontonkirikiri@gmail.com>"
+copyright = "haruki7049"
 katex_enable = true
 
 [[extra.translations.en]]
