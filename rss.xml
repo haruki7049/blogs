@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Haruki7049&#x27;s blogs</title>
+      <link>https://blogs.haruki7049.dev</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://blogs.haruki7049.dev/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>ブログをRust製SSGのZolaで作りなおした</title>
+          <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://blogs.haruki7049.dev/posts/remade-my-blogs/</link>
+          <guid>https://blogs.haruki7049.dev/posts/remade-my-blogs/</guid>
+          <description xml:base="https://blogs.haruki7049.dev/posts/remade-my-blogs/">&lt;h2 id=&quot;matakonoren-buroguzai-gou-zhu-siteru&quot;&gt;またこの人、ブログ再構築してる…&lt;&#x2F;h2&gt;
+&lt;p&gt;はい。またブログを再構築しました。EmacsのOrg-modeからのHTML生成から、Rust製SSGのZolaというものを使うようにしました（再構築するの、書き直す記事数が少ないとやりやすくて楽しいんだよなぁ）。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;buroguzai-gou-zhu-dakeziyanakute-burogugeng-xin-moding-qi-de-nidekitara&quot;&gt;ブログ再構築だけじゃなくて、ブログ更新も定期的にできたら…&lt;&#x2F;h2&gt;
+&lt;p&gt;本当に、ブログ更新も定期的にできたら良いのになぁ…。&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>meguro.vim #31 レポート記事</title>
+          <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://blogs.haruki7049.dev/posts/meguro-vim-31-report/</link>
+          <guid>https://blogs.haruki7049.dev/posts/meguro-vim-31-report/</guid>
+          <description xml:base="https://blogs.haruki7049.dev/posts/meguro-vim-31-report/">&lt;h2 id=&quot;meguro-vim-31-nixing-tutekita&quot;&gt;meguro.vim #31 に行ってきた&lt;&#x2F;h2&gt;
+&lt;p&gt;今回参加したmeguro.vim #31へのリンク。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;megurovim.connpass.com&#x2F;event&#x2F;362426&#x2F;&quot;&gt;https:&#x2F;&#x2F;megurovim.connpass.com&#x2F;event&#x2F;362426&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;めっちゃ楽しかった。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;he-wositano&quot;&gt;何をしたの？&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;haruki7049&#x2F;lightmix&quot;&gt;lightmix&lt;&#x2F;a&gt;をみんなの前で話した。&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;hakkadaikon&quot;&gt;@hakkadaikon&lt;&#x2F;a&gt;さんと卓球した。&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;lightmixwominnanoqian-dehua-sitarasii&quot;&gt;lightmixをみんなの前で話したらしい&lt;&#x2F;h2&gt;
+&lt;p&gt;lightmixとは、Zig言語で音データの波形を&lt;code&gt;[]const f32&lt;&#x2F;code&gt;として扱い、それの生成と加工、Waveファイルへの書き込みを容易くする、音声処理ライブラリ。現在、&lt;code&gt;&#x2F;src&lt;&#x2F;code&gt;内のソースコードが約600行くらいになっていて、とてもシンプルに出来ていると自負している。そんなライブラリ。&lt;&#x2F;p&gt;
+&lt;p&gt;それで作った音源を、発表を聞いてくれている人たちに聞いてもらった。&lt;em&gt;すごくたのしかった（小並感）。&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;それがこれです。ノーマライズはしてありますが、音量に気を付けてください。&lt;br&gt;&lt;audio controls src=&quot;&#x2F;src&#x2F;audio&#x2F;seventh-chords.wav&quot;&gt;&amp;lt;&#x2F;&amp;gt;&lt;&#x2F;p&gt;
+&lt;p&gt;色々と、私がlightmixを書くときに拘ったところとか、lightmixでわざと実装しなかった部分とか話せた。&lt;em&gt;すごくたのしかった（小並感）。&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;hakkadaikonsantozhuo-qiu-sitarasii&quot;&gt;@hakkadaikonさんと卓球したらしい&lt;&#x2F;h2&gt;
+&lt;p&gt;あまり卓球のことは詳しくないからアレだけど、卓球のフォームとかを&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;hakkadaikon&quot;&gt;発火大根&lt;&#x2F;a&gt;さんに教えてもらった。そうしたら、フォアハンドで少し返せるようになった…かもしれない。大体四分の一くらい、発火さんに返せた、と記憶してる。とっても汗をかいたし、久し振りに体を動かしたものだったから、すごくたのしかった。いや、&lt;em&gt;すごくたのしかった（小並感）。&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;jie-lun&quot;&gt;結論。&lt;&#x2F;h2&gt;
+&lt;p&gt;meguro.vimはいいぞ（確信）。&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
