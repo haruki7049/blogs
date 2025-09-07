@@ -1,4 +1,4 @@
 .direnv/
 
-# Exported HTML
-*.html
+# Zola
+public/
